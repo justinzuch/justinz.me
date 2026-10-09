@@ -33,11 +33,11 @@ if (
     redirectWithStatus('invalid');
 }
 
-$recipient = 'contact@justinz.me';
+$recipient = 'justin@justinz.me';
 $subject = 'New contact form message';
 $body = "Name: {$name}\nEmail: {$email}\n\n{$message}";
 $headers = [
-    'From: Justinz.me Contact Form <contact@justinz.me>',
+    'From: Justinz.me Contact Form <justin@justinz.me>',
     'Reply-To: ' . $email,
     'Content-Type: text/plain; charset=UTF-8'
 ];

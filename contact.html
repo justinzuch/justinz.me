@@ -43,19 +43,20 @@
                             <p class="mb-0"><i class="bi bi-telephone-fill text-primary me-2"></i>XXXXXXXXXXXX</p>
                         </div>
                         <hr class="my-4">
-                        <form id="contactForm">
+                        <form id="contactForm" action="contact.php" method="post">
                             <div class="mb-3">
                                 <label for="name" class="form-label fw-semibold">Name</label>
-                                <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                <input type="text" class="form-control" id="name" name="name" maxlength="200" placeholder="Your Name" required>
                             </div>
                             <div class="mb-3">
                                 <label for="email" class="form-label fw-semibold">Email</label>
-                                <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
+                                <input type="email" class="form-control" id="email" name="email" maxlength="254" placeholder="name@example.com" required>
                             </div>
                             <div class="mb-3">
                                 <label for="message" class="form-label fw-semibold">Message</label>
-                                <textarea class="form-control" id="message" rows="4" placeholder="Your message..." required></textarea>
+                                <textarea class="form-control" id="message" name="message" rows="4" maxlength="10000" placeholder="Your message..." required></textarea>
                             </div>
+                            <div id="formStatus" class="mb-3" role="status" aria-live="polite"></div>
                             <button type="submit" class="btn btn-primary w-100">Send Message</button>
                         </form>
                     </div>
